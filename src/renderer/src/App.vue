@@ -12,6 +12,6 @@ import Versions from './components/Versions.vue'
   <p class="hero-tagline">Please try pressing <code>F12</code> to open the devTool</p>
 </template>
 
-<style lang="less">
-@import './assets/css/styles.less';
+<style lang="scss">
+@import './assets/css/styles.scss';
 </style>
