@@ -1,17 +1,24 @@
 <script setup lang="ts">
-import Versions from './components/Versions.vue'
+// import Versions from './components/Versions.vue'
+import Card from './components/Card.vue'
+// @ts-ignore fxxk you micro$oft!
+import { $t, $lang } from './i18n/load'
+document.title = 'chiblog Editor'
 </script>
 
 <template>
-  <Versions></Versions>
-
-  <svg class="hero-logo" viewBox="0 0 900 300">
-    <use xlink:href="./assets/icons.svg#electron" />
-  </svg>
-  <h2 class="hero-text">You've successfully created an Electron project with Vue and TypeScript</h2>
-  <p class="hero-tagline">Please try pressing <code>F12</code> to open the devTool</p>
+  <!-- <Versions></Versions> -->
+  <Card>
+    <h2>
+      {{ $t('LANG') }}:
+      <button @click="$lang('zh')">简体中文</button>
+      <button @click="$lang('en')">English</button>
+    </h2>
+    <h1>{{ $t('TITLE') }}</h1>
+    <div>Edit chiblog configuration.</div>
+  </Card>
 </template>
 
 <style lang="scss">
-@import './assets/css/styles.scss';
+@import './assets/styles/styles.scss';
 </style>
