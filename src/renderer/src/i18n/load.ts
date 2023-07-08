@@ -20,4 +20,12 @@ function $t(key: string): string {
   }
 }
 
-export { $t, $lang }
+function $l(): string {
+  let lang: string
+  if (localStorage.getItem('lang') !== null) {
+    lang = localStorage.getItem('lang') || 'en'
+  } else lang = navigator.language
+  return lang
+}
+
+export { $t, $lang, $l }
