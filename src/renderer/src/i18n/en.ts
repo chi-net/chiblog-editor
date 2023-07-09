@@ -1,5 +1,5 @@
 export default {
-  TITLE: 'chiblog editor',
+  TITLE: 'chiblog configuration editor',
   LANG: 'Languages',
   ABOUT: 'About',
   COPYRIGHT_STATEMENT:
