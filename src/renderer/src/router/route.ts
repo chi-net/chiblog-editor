@@ -13,7 +13,7 @@ function push(route: string): void {
 }
 
 function component(): Component {
-  return list[current()]
+  return list[current()] || list['index']
 }
 
 const $route = {

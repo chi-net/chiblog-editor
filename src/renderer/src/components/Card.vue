@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 // just for article
 // import { defineProps, ref, onMounted } from 'vue'
 import { ref, onMounted } from 'vue'
@@ -26,11 +26,14 @@ onMounted(async () => {
       entries.forEach(function (entry) {
         if (entry.isIntersecting) {
           const image = entry.target
+          //@ts-ignore nmsl
           image.style.opacity = 0
           setTimeout(() => {
+            //@ts-ignore nmsl
             image.style.opacity = 1
             image.classList.remove('lazy')
             imageObserver.unobserve(image)
+            //@ts-ignore nmsl
             image.src = image.dataset.src
           }, 1000)
         }
